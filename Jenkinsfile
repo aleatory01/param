@@ -7,19 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('チェックアウトして設定ファイル読み込み') {
-            steps {
-                // プロジェクトをチェックアウト
-                //checkout scm
-
-                script {
-                    // チェックアウト後に設定ファイルを読み込む
-                    // Pipeline Utility Steps Pluginの関数を使う
-                    // CONFIG = readYaml(file: 'config.yml')
-                }
-            }
-        }
-
         stage('設定ファイル参照') {
             steps {
                 echo "CONFIG.someProp ＝ ${CONFIG.someProp}"
