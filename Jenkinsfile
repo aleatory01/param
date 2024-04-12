@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     environment {
-        CONFIG = "" //この時点ではプロジェクトの設定ファイルを読み込めないので仮の値を設定しておく
         CONFIG = readYaml(file: 'config.yml')
     }
 
