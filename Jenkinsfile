@@ -2,10 +2,18 @@ pipeline {
     agent any
 
     environment {
-        CONFIG = readYaml(file: 'config.yml')
+        CONFIG = ""
     }
 
     stages {
+        stage('チェックアウトして設定ファイル読み込み') {
+            steps {
+                script {
+                    CONFIG = readYaml(file: 'config.yml')
+                }
+            }
+        }
+
         stage('設定ファイル参照') {
             steps {
                 echo "CONFIG.someProp ＝ ${CONFIG.someProp}"
