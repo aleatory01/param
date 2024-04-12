@@ -9,7 +9,7 @@ pipeline {
         stage('チェックアウトして設定ファイル読み込み') {
             steps {
                 // プロジェクトをチェックアウト
-                checkout scm
+                //checkout scm
 
                 script {
                     // チェックアウト後に設定ファイルを読み込む
