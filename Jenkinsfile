@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         CONFIG = "" //この時点ではプロジェクトの設定ファイルを読み込めないので仮の値を設定しておく
+        CONFIG = readYaml(file: 'config.yml')
     }
 
     stages {
@@ -14,7 +15,7 @@ pipeline {
                 script {
                     // チェックアウト後に設定ファイルを読み込む
                     // Pipeline Utility Steps Pluginの関数を使う
-                    CONFIG = readYaml(file: 'config.yml')
+                    // CONFIG = readYaml(file: 'config.yml')
                 }
             }
         }
