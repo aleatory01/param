@@ -1,0 +1,7 @@
+someProp: val01
+someCategory:
+  prop: val02
+  arrayProp:
+    - val03
+    - val04
+    - val05
